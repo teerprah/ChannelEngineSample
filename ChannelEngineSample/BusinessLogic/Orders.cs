@@ -3,11 +3,11 @@ using RestSharp;
 using Shared;
 using Shared.Enums;
 
-namespace Orders;
+namespace BusinessLogic;
 
 public class Orders
 {
-    private IChannelEngineRestClient _channelEngineRestClient;
+    private readonly IChannelEngineRestClient _channelEngineRestClient;
 
     public Orders(IChannelEngineRestClient channelEngineRestClient)
     {

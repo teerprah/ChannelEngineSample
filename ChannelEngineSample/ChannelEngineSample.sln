@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelEngineSample.Web", "ChannelEngineSample.Web\ChannelEngineSample.Web.csproj", "{4061A944-0CEC-4ADB-959F-C1C0CD28FAA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders", "Orders\Orders.csproj", "{30F7A131-5F0A-4C09-87C8-C821C18CE0DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{30F7A131-5F0A-4C09-87C8-C821C18CE0DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{53B5B6A6-06E2-4379-82F2-489FC57E8D53}"
 EndProject
