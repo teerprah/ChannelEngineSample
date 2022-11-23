@@ -6,5 +6,6 @@ namespace Shared;
 
 public interface IChannelEngineRestClient
 {
-    Task<JsonObject?> GetOrders(List<OrderStatus> statuses);
+    RestClient Client { get; }
+    RestRequest ChannelEngineRestRequest(string endpoint);
 }
