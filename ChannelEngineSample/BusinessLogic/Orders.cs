@@ -17,7 +17,7 @@ public class Orders
     public Task<JsonObject?> GetOrders(List<OrderStatus> statuses)
     {
         var request = _channelEngineRestClient.ChannelEngineRestRequest("/v2/orders");
-        statuses.ForEach(status=> request.AddQueryParameter<>("statuses", status));
+        statuses.ForEach(status=> request.AddParameter("statuses", status.Name));
         return  _channelEngineRestClient.Client.GetAsync<JsonObject>(request);
     }
 }

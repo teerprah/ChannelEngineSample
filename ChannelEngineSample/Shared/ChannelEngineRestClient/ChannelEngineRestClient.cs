@@ -1,4 +1,5 @@
 using System.Text.Json.Nodes;
+using Microsoft.Extensions.Options;
 using RestSharp;
 using Shared.Enums;
 
@@ -9,14 +10,14 @@ public class ChannelEngineRestClient: IChannelEngineRestClient, IDisposable
     public RestClient Client { get; }
     private readonly string _apiKey;
     
-    public ChannelEngineRestClient(string baseUrl, string apiKey)
+    public ChannelEngineRestClient(IOptions<ChannelEngineApiConfig> apiConfig)
     {
-        var options = new RestClientOptions(baseUrl);
+        var options = new RestClientOptions(apiConfig.Value.BaseUrl);
         Client = new RestClient(options);
-        _apiKey = apiKey;
+        _apiKey = apiConfig.Value.ApiKey;
     }
-
-   
+    
+    
 
     public RestRequest ChannelEngineRestRequest(string endpoint)
     {
