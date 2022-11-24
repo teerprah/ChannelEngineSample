@@ -25,8 +25,8 @@ public class ChannelEngineRestClient: IChannelEngineRestClient, IDisposable
         request.AddQueryParameter("apikey", _apiKey);
         return request;
     }
-    
-    
+
+
     public void Dispose() {
         Client?.Dispose();
         GC.SuppressFinalize(this);

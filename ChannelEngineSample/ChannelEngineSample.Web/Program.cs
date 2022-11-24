@@ -8,10 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<ChannelEngineApiConfig>(builder.Configuration.GetSection("ChannelEngineApiConfig"));
 builder.Services.AddSingleton<IChannelEngineRestClient, ChannelEngineRestClient>();
 builder.Services.AddSingleton<Orders>();
-builder.Services.AddMvcCore();
+builder.Services.AddSingleton<Products>();
+builder.Services.AddMvcCore().AddRazorViewEngine();
 var app = builder.Build();
-
-app.MapGet("/", () => "Hello World");
 app.MapControllers();
 
 app.Run();

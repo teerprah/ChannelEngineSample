@@ -1,0 +1,34 @@
+@model System.Collections.Generic.IEnumerable<Shared.Models.ProductModel>
+
+@{
+    ViewBag.Title = "ChannelEngine Demo - Products";
+    Layout = "_Layout";
+}
+<h2 class="container text-center">@ViewBag.Title</h2>
+<div class="container-md">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>
+                Product Name
+            </th> 
+            <th>
+                GTIN
+            </th>
+            <th>Quantity</th>
+        </tr>
+        </thead>
+        @{
+            foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.ProductName</td>
+                    <td>@product.GTIN</td>
+                    <td>@product.Quantity</td>
+                </tr>
+            }
+        }
+    </table>
+</div>
+
+
