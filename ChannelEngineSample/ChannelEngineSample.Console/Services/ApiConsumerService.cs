@@ -1,4 +1,5 @@
 using BusinessLogic;
+using ConsoleTables;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -40,7 +41,12 @@ public class ApiConsumerService
         {
             _logger.LogInformation(
                 $"Patch request completed! Response from server: {patchProductStockResponse.Content}");
-            System.Console.WriteLine(JsonConvert.SerializeObject(topFiveBestSellingProducts));
+            var table = new ConsoleTable("GTIN", "ProductName", "Quantity", "MerchantProductNumber");
+            foreach (var product in topFiveBestSellingProducts)
+            {
+                table.AddRow(product.GTIN, product.ProductName, product.Quantity, product.MerchantProductNumber);
+            }
+            table.Write();
         }
 
     }
