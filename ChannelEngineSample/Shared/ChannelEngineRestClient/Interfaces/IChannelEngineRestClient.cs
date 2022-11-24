@@ -6,6 +6,6 @@ namespace Shared;
 
 public interface IChannelEngineRestClient
 {
-    RestClient Client { get; }
+    IRestClient Client { get; }
     RestRequest ChannelEngineRestRequest(string endpoint);
 }

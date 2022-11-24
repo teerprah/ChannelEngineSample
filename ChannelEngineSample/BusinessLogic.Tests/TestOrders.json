@@ -1,0 +1,125 @@
+{
+  "Content": [
+    {
+      "Id": 10,
+      "Lines": [
+        {
+          "Status": "IN_PROGRESS",
+          "IsFulfillmentByMarketplace": false,
+          "Gtin": "8719351029609",
+          "Description": "Test Object with size S",
+          "StockLocation": {
+            "Id": 2,
+            "Name": "api-dev"
+          },
+          "ChannelProductNo": "10193",
+          "MerchantProductNo": "001201-S",
+          "Quantity": 20
+        }
+      ]
+    },
+    {
+      "Id": 9,
+      "Lines": [
+        {
+          "Status": "IN_PROGRESS",
+          "IsFulfillmentByMarketplace": false,
+          "Gtin": "8719351029609",
+          "Description": "Test Object with size M",
+          "StockLocation": {
+            "Id": 2,
+            "Name": "api-dev"
+          },
+          "ChannelProductNo": "10924",
+          "MerchantProductNo": "001201-M",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "Id": 8,
+      "Lines": [
+        {
+          "Status": "IN_PROGRESS",
+          "IsFulfillmentByMarketplace": false,
+          "Gtin": "8719351029609",
+          "Description": "Test Object with size XL",
+          "StockLocation": {
+            "Id": 2,
+            "Name": "api-dev"
+          },
+          "ChannelProductNo": "10924",
+          "MerchantProductNo": "001201-XL",
+          "Quantity": 1
+        }
+      ]
+    },
+    {
+      "Id": 7,
+      "Lines": [
+        {
+          "Status": "IN_PROGRESS",
+          "IsFulfillmentByMarketplace": false,
+          "Gtin": "8719351029609",
+          "Description": "Test Object with size S",
+          "StockLocation": {
+            "Id": 2,
+            "Name": "api-dev"
+          },
+          "ChannelProductNo": "10134",
+          "MerchantProductNo": "001201-S",
+          "Quantity": 5
+        }
+      ]
+    },
+    {
+      "Id": 6,
+      "Lines": [
+        {
+          "Status": "IN_PROGRESS",
+          "IsFulfillmentByMarketplace": false,
+          "Gtin": "8719351029609",
+          "Description": "Test Object with size M",
+          "StockLocation": {
+            "Id": 2,
+            "Name": "api-dev"
+          },
+          "ChannelProductNo": "10924",
+          "MerchantProductNo": "001201-M",
+          "Quantity": 17
+        }
+      ]
+    },
+    {
+      "Id": 5,
+      "Lines": [
+        {
+          "Status": "IN_PROGRESS",
+          "IsFulfillmentByMarketplace": false,
+          "Gtin": "8719351029609",
+          "Description": "Test Object with size S",
+          "StockLocation": {
+            "Id": 2,
+            "Name": "api-dev"
+          },
+          "ChannelProductNo": "10924",
+          "MerchantProductNo": "001201-S",
+          "Quantity": 5
+        },
+        {
+          "Status": "IN_PROGRESS",
+          "IsFulfillmentByMarketplace": false,
+          "Gtin": "8719351029609",
+          "Description": "Test Object with size L",
+          "StockLocation": {
+            "Id": 2,
+            "Name": "api-dev"
+          },
+          "ChannelProductNo": "10924",
+          "MerchantProductNo": "001201-L",
+          "Quantity": 12
+        }
+      ]
+    }
+  ]
+}

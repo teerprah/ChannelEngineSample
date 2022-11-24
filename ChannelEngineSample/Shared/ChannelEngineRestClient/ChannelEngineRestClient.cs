@@ -7,7 +7,7 @@ namespace Shared.ChannelEngineRestClient;
 
 public class ChannelEngineRestClient: IChannelEngineRestClient, IDisposable
 {
-    public RestClient Client { get; }
+    public IRestClient Client { get; }
     private readonly string _apiKey;
     
     public ChannelEngineRestClient(IOptions<ChannelEngineApiConfig> apiConfig)

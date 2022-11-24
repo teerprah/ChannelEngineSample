@@ -42,7 +42,11 @@ public class Orders
                     return new ProductModel()
                     {
                         ProductName = key,
-                        Quantity = group.Count(),
+                        Quantity = group.Sum(c=>
+                        {
+                            int.TryParse(c["Quantity"].ToString(), out var val);
+                            return val;
+                        }),
                         GTIN = firstItem["Gtin"].ToString(),
                         MerchantProductNumber = firstItem["MerchantProductNo"].ToString()
                     };
