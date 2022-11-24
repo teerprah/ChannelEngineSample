@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Shared;
+namespace Shared.Enums;
 public abstract class Enumeration : IComparable
 {
     public string Name { get; private set; }

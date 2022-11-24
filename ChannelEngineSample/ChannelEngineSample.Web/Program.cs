@@ -1,10 +1,21 @@
+using System.Collections.Immutable;
 using BusinessLogic;
+using Serilog;
 using Shared;
 using Shared.ChannelEngineRestClient;
 using Shared.Enums;
 
+
 var builder = WebApplication.CreateBuilder(args);
-//builder.Services.AddSingleton<ChannelEngineApiConfig>();
+
+//Add logging using Serilog
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .WriteTo.File("log-.txt", rollingInterval: RollingInterval.Hour)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 builder.Services.Configure<ChannelEngineApiConfig>(builder.Configuration.GetSection("ChannelEngineApiConfig"));
 builder.Services.AddSingleton<IChannelEngineRestClient, ChannelEngineRestClient>();
 builder.Services.AddSingleton<Orders>();

@@ -3,7 +3,9 @@ using BusinessLogic;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Serilog;
 using Shared.Enums;
+using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace ChannelEngineSample.Web;
 
@@ -14,11 +16,13 @@ public class OrdersController : Controller
 {
     private readonly Orders _orders;
     private readonly Products _products;
+    private ILogger<OrdersController> _logger;
 
-    public OrdersController(Orders orders, Products products)
+    public OrdersController(Orders orders, Products products, ILogger<OrdersController> logger)
     {
         _orders = orders;
         _products = products;
+        _logger = logger;
     }
     // GET
     public async Task<IActionResult> Index()
@@ -32,7 +36,12 @@ public class OrdersController : Controller
         var patchProductStockResponse =  await _products.UpdateProductStock(topFiveBestSellingProducts.FirstOrDefault().MerchantProductNumber, 25);
         if (!patchProductStockResponse.IsSuccessful)
         {
+            _logger.LogError($"Failed to patch products: {patchProductStockResponse.Content}");
             return BadRequest(patchProductStockResponse.Content);
+        }
+        else
+        {
+            _logger.LogInformation($"Patch request completed! Response from server: {patchProductStockResponse.Content}");
         }
         return View(topFiveBestSellingProducts);
 
