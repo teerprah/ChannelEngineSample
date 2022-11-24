@@ -10,7 +10,7 @@ public class ApiConsumerService
 {
     private readonly  Orders _orders;
     private readonly Products _products;
-    private ILogger<ApiConsumerService> _logger;
+    private readonly ILogger<ApiConsumerService> _logger;
 
     public ApiConsumerService(Orders orders, Products products, ILogger<ApiConsumerService> logger)
     {

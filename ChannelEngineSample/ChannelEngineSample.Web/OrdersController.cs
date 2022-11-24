@@ -1,11 +1,8 @@
-using System.Text.Json.Nodes;
 using BusinessLogic;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Serilog;
 using Shared.Enums;
-using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace ChannelEngineSample.Web;
 

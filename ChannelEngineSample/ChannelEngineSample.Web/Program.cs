@@ -1,9 +1,7 @@
-using System.Collections.Immutable;
 using BusinessLogic;
 using Serilog;
 using Shared;
 using Shared.ChannelEngineRestClient;
-using Shared.Enums;
 
 
 var builder = WebApplication.CreateBuilder(args);
