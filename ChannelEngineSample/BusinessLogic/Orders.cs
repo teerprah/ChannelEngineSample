@@ -24,7 +24,7 @@ public class Orders
         return await _channelEngineRestClient.Client.GetAsync(request);
     }
 
-    public IEnumerable<JToken>? GetProductsFromOrder(JObject orders)
+    public IEnumerable<JToken>? GetProductsFromOrders(JObject orders)
     {
         var content = orders["Content"]?.AsJEnumerable();
         var products = content?.SelectMany<JToken, JToken>(c => c?["Lines"].AsJEnumerable());
